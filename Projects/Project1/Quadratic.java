@@ -1,4 +1,7 @@
 //Written by kimx5227
+
+//Allows user to create quadtratics and operate on them
+// as well as finding roots using root.java and complex4.java
 import java.lang.Math;
 
 public class Quadratic
