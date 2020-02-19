@@ -15,15 +15,26 @@ public class Roots{
         }
 
 
+        public Roots(Complex4 newRoot){
+                root1 = newRoot;
+        }
+
+
         public Roots(){}
 
 
         public void printRoots(){
                 if (root1.equals(root2)){
-                    System.out.print("The quadratic formula has root " + root1.toString());
-                    System.out.println(" with multiplicity 2.");
+                    if (root1.getRealPart() != 0 ^ root1.getImaginaryPart() != 0){
+                        System.out.print("The Quadratic formula given has root " + root1.toString());
+                        System.out.println(" with multiplicity 2.");
+                    } else {
+                        System.out.println("The quadratic formula given has no roots.");
+                    }
+                } else if (root2.getRealPart() == 0 & root2.getImaginaryPart() == 0){
+                      System.out.print("The Quadratic formula given has 1 root: " + root1);
                 } else {
-                    System.out.print("The Quadratic formula has roots ");
+                    System.out.print("The Quadratic formula given has roots ");
                     System.out.println(root1.toString() + " and " + root2.toString());
                 }
         }
